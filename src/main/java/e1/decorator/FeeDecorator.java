@@ -1,6 +1,8 @@
-package e1;
+package e1.decorator;
 
-public class FeeDecorator extends BankAccountDecorator{
+import e1.API.BankAccount;
+
+public class FeeDecorator extends BankAccountDecorator {
 
     private final int fee;
 

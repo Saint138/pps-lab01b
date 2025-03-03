@@ -1,6 +1,8 @@
-package e1;
+package e1.decorator;
 
-public class BankAccountDecorator implements BankAccount{
+import e1.API.BankAccount;
+
+public class BankAccountDecorator implements BankAccount {
 
     private final BankAccount base;
 

@@ -1,6 +1,8 @@
 package e1;
 
-class CoreBankAccount implements BankAccount {
+import e1.API.BankAccount;
+
+public class CoreBankAccount implements BankAccount {
 
     private int balance;
 

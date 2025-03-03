@@ -1,4 +1,4 @@
-package e1;
+package e1.API;
 
 public interface BankAccount {
 

@@ -1,6 +1,8 @@
-package e1;
+package e1.decorator;
 
-public class CanWithdrawDecorator extends BankAccountDecorator{
+import e1.API.BankAccount;
+
+public class CanWithdrawDecorator extends BankAccountDecorator {
 
     public CanWithdrawDecorator(BankAccount base) {
         super(base);

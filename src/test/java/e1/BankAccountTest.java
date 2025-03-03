@@ -1,17 +1,18 @@
 package e1;
 
+import e1.API.*;
+import e1.decorator.*;
+import e1.factory.*;
+
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import e1.BankAccountDecorator;
-import e1.CanWithdrawDecorator;
-import e1.FeeDecorator;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class BankAccountTest {
 
-    private BankAccountDecorator account;
+    private BankAccount account;
 
     private static final int EMPTY_BALANCE = 0;
     private static final int INITIAL_DEPOSIT = 1000;
@@ -23,7 +24,7 @@ public class BankAccountTest {
 
     @BeforeEach
     void init(){
-        this.account = new CanWithdrawDecorator(new FeeDecorator(new CoreBankAccount(),SILVER_FEE));
+        this.account = new BankAccountFactoryImpl().createSilverAccount(SILVER_FEE);
     }
 
     @Test
